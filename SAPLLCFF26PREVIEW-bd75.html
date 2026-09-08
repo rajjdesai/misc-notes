@@ -82,6 +82,38 @@
   .prose p:last-child {
     margin-bottom: 0;
   }
+  .kickoffbox {
+    margin: 0 24px 16px 24px;
+    background-color: #0b3d26;
+    border-radius: 6px;
+    padding: 10px 16px;
+  }
+  .kickoffrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .kickoffrow:last-child { border-bottom: none; }
+  .kday {
+    color: #f4c542;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .ktime {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .kgame {
+    color: #c9e3d3;
+    font-size: 11px;
+    text-align: right;
+  }
   .matchup {
     border-left: 4px solid #f4c542;
     background-color: #f8f7f2;
@@ -99,6 +131,39 @@
     margin: 0;
     font-size: 14px;
     line-height: 1.6;
+  }
+  .playerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .playerPic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: #555555;
+    max-width: 80px;
+  }
+  .playerPic img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f4c542;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .playerPic span {
+    text-align: center;
+    line-height: 1.2;
+  }
+  .vsLabel {
+    font-size: 11px;
+    color: #999999;
+    font-weight: bold;
   }
   .longcon {
     border-left: 4px solid #0b3d26;
@@ -159,9 +224,10 @@
     .header { padding: 22px 18px; }
     .header h1 { font-size: 20px; }
     .section, .prose { padding-left: 18px; padding-right: 18px; }
-    .matchup, .longcon { margin-left: 12px; margin-right: 12px; }
+    .matchup, .longcon, .kickoffbox { margin-left: 12px; margin-right: 12px; }
     .predictions, .tips { margin-left: 18px; margin-right: 18px; }
     .yardline { margin: 0 18px; }
+    .playerPic img { width: 48px; height: 48px; }
   }
 </style>
 </head>
@@ -177,32 +243,81 @@
 
       <div class="yardline"></div>
 
+      <div class="section"><span class="pill">FIRST TIME PLAYING? READ THIS</span></div>
+      <div class="prose" style="padding-bottom:4px;">
+        <p><b>Set your lineup before kickoff.</b> Each player locks individually at THEIR OWN game's start time — not a single league-wide deadline. Week 1's first three kickoffs:</p>
+      </div>
+      <div class="kickoffbox">
+        <div class="kickoffrow"><span class="kday">Wed 9/9</span><span class="ktime">8:20 PM ET</span><span class="kgame">Patriots @ Seahawks</span></div>
+        <div class="kickoffrow"><span class="kday">Thu 9/10</span><span class="ktime">8:35 PM ET</span><span class="kgame">49ers vs Rams (Melbourne)</span></div>
+        <div class="kickoffrow"><span class="kday">Sun 9/13</span><span class="ktime">1:00 PM ET</span><span class="kgame">early Sunday slate begins</span></div>
+      </div>
+      <div class="prose" style="padding-top:0;padding-bottom:4px;">
+        <p>A few of you have never done this before. Here's what else will actually bite you if you don't know it going in:</p>
+      </div>
+      <ul class="tips">
+        <li><b>Lineups lock per player, not per team.</b> Only players in games that have started lock — you can still swap guys playing later in the day right up until their own kickoff.</li>
+        <li><b>Waivers are rolling, no FAAB.</b> Claims clear Wednesday 3AM ET on a 2-day window. Anyone truly unowned can be added instantly, first-come-first-served, any day.</li>
+        <li><b>This is a half-PPR league</b> — 0.5 points per reception, not the full 1.0 you may be used to from other leagues.</li>
+        <li><b>Defenses score a flat ZERO if they allow 21&ndash;27 points.</b> Don't autopilot a defense start — check the matchup.</li>
+        <li><b>Trade deadline is Week 11.</b> No need to panic-trade in September; you've got time.</li>
+        <li><b>Top 6 make the playoffs, starting Week 15.</b> Miss it, and you're playing for pride — or the Poop Bowl.</li>
+        <li><b>Last place becomes Poop King/Queen</b> and owes a combined 20 (guys) / 15 (girls) across beers, miles run, and pizza slices at the group event. Don't finish last.</li>
+      </ul>
+
+      <div class="yardline dark"></div>
+
       <div class="section"><span class="pill">THE MATCHUPS</span></div>
       <div class="prose" style="padding-bottom:4px;">
         <p>Five real Week 1 pairings. Scores are all zero right now — that's not permission to be nice about it.</p>
       </div>
 
       <div class="matchup">
+        <div class="playerRow">
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/6904.jpg" alt="Jalen Hurts"><span>Jalen Hurts</span></div>
+          <span class="vsLabel">VS</span>
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/12508.jpg" alt="Jaxson Dart"><span>Jaxson Dart</span></div>
+        </div>
         <h3>Katrina vs. Apurva</h3>
         <p>Katrina's rolling out Jalen Hurts like he's still worth a damn, except he just got dumped by A.J. Brown (Patriot now, save your outrage) and is breaking in a brand new OC in Week 1. Bold strategy for someone whose whole draft was "boring and correct." Apurva waited until Round 10 on QB and still landed Jaxson Dart, who reportedly "feels in command" — cute, ask him again after he's played an actual real game.</p>
       </div>
 
       <div class="matchup">
+        <div class="playerRow">
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/11564.jpg" alt="Drake Maye"><span>Drake Maye</span></div>
+          <span class="vsLabel">VS</span>
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/4984.jpg" alt="Josh Allen"><span>Josh Allen</span></div>
+        </div>
         <h3>Raj vs. Malvi</h3>
         <p>Raj reached for Drake Maye a full round early and is somehow about to look like a genius for it — New England fed the guy A.J. Brown AND Romeo Doubs this offseason, and the funniest part is Malvi's the one who actually drafted Brown. Malvi's WR room is disgustingly good, but she's hoarding THREE running backs behind Bijan Robinson like she's bracing for a war nobody else is fighting — a tough Texans D in Week 1 is step one of finding out if that panic was justified.</p>
       </div>
 
       <div class="matchup">
+        <div class="playerRow">
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/6770.jpg" alt="Joe Burrow"><span>Joe Burrow</span></div>
+          <span class="vsLabel">VS</span>
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/9226.jpg" alt="De'Von Achane"><span>De'Von Achane</span></div>
+        </div>
         <h3>Parv vs. Cody</h3>
         <p>Parv's draft was an arson investigation and Joe Burrow — fresh off turf-toe surgery — is the one firefighter left standing. "Rock-solid QB1" is doing a lot of heavy lifting covering for Kimani Vidal and Sam Darnold. Cody waited on QB like a disciplined adult and then blew the savings on a washed Travis Kelce three rounds early anyway. At least Achane's own coach is promising 40 touches a game, so somebody on this roster still has a pulse.</p>
       </div>
 
       <div class="matchup">
+        <div class="playerRow">
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/4881.jpg" alt="Lamar Jackson"><span>Lamar Jackson</span></div>
+          <span class="vsLabel">VS</span>
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/6797.jpg" alt="Justin Herbert"><span>Justin Herbert</span></div>
+        </div>
         <h3>Lelia &amp; Ryan vs. Abhishek</h3>
         <p>Lelia &amp; Ryan are trotting out Lamar Jackson, who spent last year falling apart one body part at a time and still only managed 16.5 a game for the trouble — "a QB1 buy that needs an insurance plan" is a hell of a way to describe your own starting quarterback. Abhishek's running back room is four deep and one of them is a literal rookie who's never played a down, so pray for Justin Herbert, who at least draws a bad Cardinals pass D in Week 1.</p>
       </div>
 
       <div class="matchup">
+        <div class="playerRow">
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/11560.jpg" alt="Caleb Williams"><span>Caleb Williams</span></div>
+          <span class="vsLabel">VS</span>
+          <div class="playerPic"><img src="https://sleepercdn.com/content/nfl/players/thumb/4034.jpg" alt="Christian McCaffrey"><span>Christian McCaffrey</span></div>
+        </div>
         <h3>Milena vs. CJ</h3>
         <p>Milena's whole season comes down to whether reaching for Caleb Williams 17 picks early was genius or a coin flip — a trash Panthers defense doing her a favor in Week 1 is free money, use it. CJ is still floating around off the best fucking draft anyone's had in years, and as if that wasn't unfair enough, he ALSO got Jayden Daniels basically for free in Round 7. Some people don't deserve nice things.</p>
       </div>
@@ -227,28 +342,11 @@
 
       <div class="yardline dark"></div>
 
-      <div class="section"><span class="pill">FIRST TIME PLAYING? READ THIS</span></div>
-      <div class="prose" style="padding-bottom:4px;">
-        <p>A few of you have never done this before. Here's what'll actually bite you if you don't know it going in:</p>
-      </div>
-      <ul class="tips">
-        <li><b>Lineups lock per player, not per team.</b> When the early games kick off Sunday, only THOSE players lock — you can still swap guys playing later in the day right up until their own kickoff.</li>
-        <li><b>Waivers are rolling, no FAAB.</b> Claims clear Wednesday 3AM ET on a 2-day window. Anyone truly unowned can be added instantly, first-come-first-served, any day.</li>
-        <li><b>This is a half-PPR league</b> — 0.5 points per reception, not the full 1.0 you may be used to from other leagues.</li>
-        <li><b>Defenses score a flat ZERO if they allow 21&ndash;27 points.</b> Don't autopilot a defense start — check the matchup.</li>
-        <li><b>Trade deadline is Week 11.</b> No need to panic-trade in September; you've got time.</li>
-        <li><b>Top 6 make the playoffs, starting Week 15.</b> Miss it, and you're playing for pride — or the Poop Bowl.</li>
-        <li><b>Last place becomes Poop King/Queen</b> and owes a combined 20 (guys) / 15 (girls) across beers, miles run, and pizza slices at the group event. Don't finish last.</li>
-      </ul>
-
-      <div class="yardline dark"></div>
-
       <div class="section"><span class="pill">BOLD PREDICTIONS</span></div>
       <div class="prose" style="padding-bottom:4px;">
         <p><i>Purely speculative — ask again in Week 12.</i></p>
       </div>
       <ul class="predictions">
-        <li>CJ's absurd draft doesn't just make the playoffs — it wins the whole fucking thing, wire to wire.</li>
         <li>One of this year's "panic" late-round quarterbacks (Dart or Herbert) finishes top-3 at the position and makes everyone who reached early look like an idiot.</li>
         <li>A team with a real bench crisis right now (Lelia &amp; Ryan's one glass tight end, Abhishek's threadbare running back room) misses the playoffs entirely because they never fixed it.</li>
         <li>The Toilet Bowl comes down to the final possession of Week 17 — somebody's going to remember this forever.</li>
