@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>SAPLLCFF Week 5 Recap</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2ee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 28px 16px 48px 16px;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  }
+  .header {
+    background-color: #0b3d26;
+    background-image: linear-gradient(135deg, #0b3d26, #0d3b24);
+    padding: 32px 28px;
+    text-align: center;
+  }
+  .header .eyebrow {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 10px 0 4px 0;
+  }
+  .header .sub {
+    color: #a8c5a8;
+    font-size: 13px;
+  }
+  .body-pad {
+    padding: 28px 28px 8px 28px;
+  }
+  .intro {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 28px 0;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0b3d26;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 8px;
+    margin: 0 0 20px 0;
+  }
+  .callout {
+    background-color: #f7f6f0;
+    border-left: 4px solid #d4af37;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+  .callout h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #0b3d26;
+    letter-spacing: 0.3px;
+  }
+  .callout p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #333333;
+  }
+  .headshot-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .headshot-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: #555555;
+  }
+  .headshot-inner img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .meme-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 4px 0;
+  }
+  .meme-wrap img {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #d4af37;
+    display: block;
+  }
+  table.grades {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 28px 0;
+    font-size: 14px;
+  }
+  table.grades th {
+    text-align: left;
+    background-color: #0b3d26;
+    color: #ffffff;
+    padding: 10px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  table.grades td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8e6dc;
+  }
+  table.grades tr:last-child td {
+    border-bottom: none;
+  }
+  .grade-badge {
+    display: inline-block;
+    font-weight: bold;
+    color: #0b3d26;
+  }
+  .fundbox-wrap {
+    padding: 8px 0 28px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .realtalk {
+    background-color: #0b3d26;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 0 0 8px 0;
+  }
+  .realtalk .label {
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .realtalk p {
+    color: #e8f0ea;
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin: 0 0 10px 0;
+  }
+  .realtalk p:last-child { margin-bottom: 0; }
+  .signoff {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+    padding: 20px 10px 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 14px 10px 32px 10px; }
+    .header { padding: 24px 18px; }
+    .header h1 { font-size: 20px; }
+    .body-pad { padding: 20px 18px 6px 18px; }
+    .callout { padding: 14px 16px; }
+    table.grades { width: 100%; }
+    table.grades th, table.grades td { padding: 8px 8px; font-size: 13px; }
+    .fundbox-wrap table[role="presentation"] { width: 100% !important; max-width: 480px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <div class="header">
+      <div class="eyebrow">Stern And Partners LLC Fanatasy Futbol</div>
+      <h1>🏈 WEEK 5: CJ'S PERFECT SEASON DIES IN A BLOWOUT</h1>
+      <div class="sub">2026 Season · Week 5 Recap</div>
+    </div>
+
+    <div class="body-pad">
+      <p class="intro">Five weeks in and the league just lost its last undefeated team in the ugliest way possible. Let's get into it.</p>
+
+      <div class="section-title">The Breakdown</div>
+
+      <div class="callout">
+        <div class="headshot-wrap"><div class="headshot-inner">
+          <img src="https://sleepercdn.com/content/nfl/players/thumb/8228.jpg" alt="Jaylen Warren">
+          <span>Jaylen Warren</span>
+        </div></div>
+        <h3>KATRINA ENDS CJ'S PERFECT SEASON</h3>
+        <p>sportsmaxxing treen (Katrina) 140.92, Cehehe (CJ) 93.66. Jaylen Warren's 33.8 led the charge in a 47.26-point beatdown that snaps CJ's run at 4-0. This one lived a whole life in the group chat before it ended: CJ watched his win probability swing from 61% to 2% ("Fuck sleeper"), claw back to 98% on a "BELIEVE" Ted Lasso meme, then collapse to 3% after Jayden Daniels and the Commanders marched into chip-shot field goal range in overtime against the Giants and just... let the clock run out, untouched, no kick attempted. Game ended in a tie. CJ's fantasy hopes ended with it. Malvi called it minutes later: "Katrina has a 100% chance of winning now!!" The people, as Malvi put it, have won.</p>
+        <div class="meme-wrap"><img src="https://media0.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4Y2JhMzh3ZGFkYWdxdTFoejByYjRlM3Frc2E5aDNpOXVzNGRoeXM5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BpnMIuKLRiGlpt68kj/giphy.gif" alt="Shocking collapse"></div>
+      </div>
+
+      <div class="callout">
+        <div class="headshot-wrap"><div class="headshot-inner">
+          <img src="https://sleepercdn.com/content/nfl/players/thumb/4984.jpg" alt="Josh Allen">
+          <span>Josh Allen</span>
+        </div></div>
+        <h3>THE BIGGEST BLOWOUT: MALVI'S OBJ SAGA ESCALATES WHILE APURVA SINKS</h3>
+        <p>malvijani (Malvi) 160.2, apurvak10 (Apurva) 91.44 - the week's biggest margin at 68.76. Josh Allen's 31.5 anchored the demolition. And in truly committed fashion, Malvi re-added Odell Beckham Jr. off waivers this week, then dropped him again days later for Rico Dowdle - the second OBJ pickup-and-dump cycle this season. Puka Nacua's 29.2 wasn't close to enough for Apurva, who falls to 1-4 and the bottom of the league alongside her own husband.</p>
+        <div class="meme-wrap"><img src="https://media1.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4M2Y2c2IzNGgwZnJkMHluaGxsMWV5eTRhbzN1YmFjbGQ5cXZnY2VnaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/6rZyYckYM61iDq0X0k/giphy.gif" alt="Total domination"></div>
+      </div>
+
+      <div class="callout">
+        <div class="headshot-wrap"><div class="headshot-inner">
+          <img src="https://sleepercdn.com/content/nfl/players/thumb/11564.jpg" alt="Drake Maye">
+          <span>Drake Maye (benched)</span>
+        </div></div>
+        <h3>RAJ'S BENCH ANXIETY WAS ALL FOR NOTHING</h3>
+        <p>ScubaDoobaDUDE (Raj) 142.12, RedditoLombardi (Parv) 117.5. Raj told the group chat before kickoff he "wouldn't have been able to look Parv in the eye" with Drake Maye dropping 39.46 on his own bench while he was still projected to lose. Then he won by 24.62 anyway, exactly as Parv predicted ("your team ball'd out!!!"). He still left 72.14 bench points on the table - more than half his own score - but for once it didn't matter. Moves to 2-3.</p>
+        <div class="meme-wrap"><img src="https://media2.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4eXFhMmYwcTlsd2tlenhianc4c2NqNjVhZHo5MDE1Ymt2dmw1b2E5YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IFI1LZnpDck0VE7Xmg/giphy.gif" alt="Dodged a bullet"></div>
+      </div>
+
+      <div class="callout">
+        <div class="headshot-wrap"><div class="headshot-inner">
+          <img src="https://sleepercdn.com/content/nfl/players/thumb/11584.jpg" alt="Bucky Irving">
+          <span>Bucky Irving</span>
+        </div></div>
+        <h3>CODY ROLLS, ABHISHEK GETS HIS APOLOGY</h3>
+        <p>Dolphins Made Me Cry (Cody) 140.18, Humbled and Honored (Abhishek) 98.64 behind Bucky Irving's 30.5. Before we get to the score: Abhishek went on the record in the group chat demanding the AI apologize for his auto-drafted team. Fine - sorry your bot-built roster has you at 1-4 sitting right next to your own wife in the standings, Abhishek. Apology delivered. Doesn't make Trevor Lawrence's 22.74 any less not enough.</p>
+        <div class="meme-wrap"><img src="https://media1.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4cXNmbWFleXpwejd1Z3k1d3Ezcm1ocmwxOGgyZDQ1YXlqcXRxcmc4bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3my75UmuBCg2Iei92a/giphy.gif" alt="Insincere apology"></div>
+      </div>
+
+      <div class="callout">
+        <div class="headshot-wrap"><div class="headshot-inner">
+          <img src="https://sleepercdn.com/content/nfl/players/thumb/3163.jpg" alt="Jared Goff">
+          <span>Jared Goff</span>
+        </div></div>
+        <h3>MILENA OUTDUELS A RODGERS REVIVAL</h3>
+        <p>milboy (Milena) 123.12, LeliRy 103.8. Jared Goff's 28.94 was enough to hold off Rylia's brand-new Aaron Rodgers pickup, who answered with 22.0 in his debut for the co-managed squad. Not quite enough - LeliRy falls to 3-2.</p>
+        <div class="meme-wrap"><img src="https://media1.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4MWdjd2Y5aXRybmVyemdsbGxyZ2NwejNnNjh1MnVzbWhrbTQ1bHJ3NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jBQ8eumPrHJq78eRFi/giphy.gif" alt="Steady win"></div>
+      </div>
+
+      <div class="section-title">The Grades</div>
+      <table class="grades" cellpadding="0" cellspacing="0">
+        <tr><th>Grade</th><th>Manager</th><th>Team</th></tr>
+        <tr><td class="grade-badge">A+</td><td>Malvi</td><td>malvijani</td></tr>
+        <tr><td class="grade-badge">A</td><td>Katrina</td><td>sportsmaxxing treen</td></tr>
+        <tr><td class="grade-badge">A-</td><td>Cody</td><td>Dolphins Made Me Cry</td></tr>
+        <tr><td class="grade-badge">B+</td><td>Raj</td><td>ScubaDoobaDUDE</td></tr>
+        <tr><td class="grade-badge">B</td><td>Milena</td><td>milboy</td></tr>
+        <tr><td class="grade-badge">C+</td><td>Lelia &amp; Ryan</td><td>LeliRy</td></tr>
+        <tr><td class="grade-badge">C</td><td>Parv</td><td>RedditoLombardi</td></tr>
+        <tr><td class="grade-badge">D+</td><td>CJ</td><td>Cehehe</td></tr>
+        <tr><td class="grade-badge">D</td><td>Abhishek</td><td>Humbled and Honored</td></tr>
+        <tr><td class="grade-badge">F</td><td>Apurva</td><td>apurvak10</td></tr>
+      </table>
+
+      <div class="fundbox-wrap">
+<table role="presentation" width="480" cellpadding="0" cellspacing="0" bgcolor="#1a5c3a" style="background-color:#1a5c3a;background-image:linear-gradient(135deg,#1a5c3a,#0d3b24);border:6px double #d4af37;border-radius:6px;margin:0 auto;">
+<tr><td style="padding:8px 10px 0 14px;font-family:Georgia,serif;font-size:16px;color:#d4af37;" width="30">$</td><td align="center" style="padding:8px 10px 0 10px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;color:#d4af37;text-transform:uppercase;">League Winnings Fund</td><td align="right" style="padding:8px 14px 0 10px;font-family:Georgia,serif;font-size:16px;color:#d4af37;" width="30">$</td></tr>
+<tr><td colspan="3" align="center" style="padding:8px 10px 2px 10px;font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:bold;color:#ffffff;">$334.92</td></tr>
+<tr><td colspan="3" align="center" style="padding:0 10px 6px 10px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#dc2626" style="background-color:#dc2626;padding:3px 12px;border-radius:10px;"><span style="color:#ffffff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;">&#9660; -$28.99 (-8.0%) this week</span></td></tr></table></td></tr>
+<tr><td colspan="3" align="center" style="padding:0 10px 10px 10px;font-family:Arial,sans-serif;font-size:11px;color:#a8c5a8;">+$34.92 (+11.6%) total since $300 buy-in</td></tr>
+<tr><td style="padding:2px 10px 12px 14px;font-family:Georgia,serif;font-size:14px;color:#d4af37;">$</td><td align="center" style="padding:2px 10px 12px 10px;font-family:Arial,sans-serif;font-size:10px;color:#a8c5a8;">Funded $300.00 on 8/19/26</td><td align="right" style="padding:2px 14px 12px 10px;font-family:Georgia,serif;font-size:14px;color:#d4af37;">$</td></tr>
+</table>
+      </div>
+
+      <div class="realtalk">
+        <div class="label">Real Talk</div>
+        <p>The undefeated are gone. Malvi and CJ sit tied atop the league at 4-1, but CJ just found out what losing feels like, and Katrina's the one who delivered the lesson. The middle of the standings is a pileup - three teams at 3-2, three more at 2-3 - and the bottom is now a family affair: Abhishek and Apurva, husband and wife, both sitting at 1-4. Commissioner Court remains fully deadlocked on both the IR-eligibility petition and Raj's defense-scoring crusade - 0 for 2 on rule changes, but Raj is at least 2 for his last 5 on the scoreboard now, which around here counts as a heater.</p>
+        <p>Malvi's OBJ situation needs its own 30-for-30 at this point. Week 6 is wide open.</p>
+      </div>
+
+      <div class="signoff">Keep it real, keep it chaotic. 🏈</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
