@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>SAPLLCFF Week 6 Recap</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2ee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 28px 16px 48px 16px;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  }
+  .header {
+    background-color: #0b3d26;
+    background-image: linear-gradient(135deg, #0b3d26, #0d3b24);
+    padding: 32px 28px;
+    text-align: center;
+  }
+  .header .eyebrow {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .header h1 {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 10px 0 4px 0;
+  }
+  .header .sub {
+    color: #a8c5a8;
+    font-size: 13px;
+  }
+  .body-pad {
+    padding: 28px 28px 8px 28px;
+  }
+  .intro {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 28px 0;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0b3d26;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 8px;
+    margin: 0 0 20px 0;
+  }
+  .callout {
+    background-color: #f7f6f0;
+    border-left: 4px solid #d4af37;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+  .callout h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #0b3d26;
+    letter-spacing: 0.3px;
+  }
+  .callout img.meme {max-width:260px;width:100%;}
+  .callout p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #333333;
+  }
+  .headshot-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .headshot-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: #555555;
+  }
+  .headshot-inner img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .meme-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 4px 0;
+  }
+  .meme-wrap img {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #d4af37;
+    display: block;
+  }
+  table.grades {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 28px 0;
+    font-size: 14px;
+  }
+  table.grades th {
+    text-align: left;
+    background-color: #0b3d26;
+    color: #ffffff;
+    padding: 10px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  table.grades td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8e6dc;
+  }
+  table.grades tr:last-child td {
+    border-bottom: none;
+  }
+  .grade-badge {
+    display: inline-block;
+    font-weight: bold;
+    color: #0b3d26;
+  }
+  .fundbox-wrap {
+    padding: 8px 0 28px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .realtalk {
+    background-color: #0b3d26;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 0 0 8px 0;
+  }
+  .realtalk .label {
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .realtalk p {
+    color: #e8f0ea;
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin: 0 0 10px 0;
+  }
+  .realtalk p:last-child { margin-bottom: 0; }
+  .signoff {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+    padding: 20px 10px 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 14px 10px 32px 10px; }
+    .header { padding: 24px 18px; }
+    .header h1 { font-size: 20px; }
+    .body-pad { padding: 20px 18px 6px 18px; }
+    .callout { padding: 14px 16px; }
+    table.grades { width: 100%; }
+    table.grades th, table.grades td { padding: 8px 8px; font-size: 13px; }
+    .fundbox-wrap table[role="presentation"] { width: 100% !important; max-width: 480px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <div class="header">
+      <div class="eyebrow">Stern And Partners LLC Fanatasy Futbol</div>
+      <h1>🏈 WEEK 6: RAJ BENCHES 45 POINTS OF QUARTERBACK AND LOSES BY 10</h1>
+      <div class="sub">2026 Season · Week 6 Recap</div>
+    </div>
+
+    <div class="body-pad">
+      <p class="intro">Week 6 is in the books and the bench was the real MVP of this league again. Some of you left more points on the pine than your opponents scored. Let&#x27;s get into it.</p>
+
+      <div class="section-title">The Breakdown</div>
+
+      <div class="callout">
+        <div style="display:flex;justify-content:center;margin-bottom:10px;"><div style="display:flex;flex-direction:column;align-items:center;font-size:11px;color:#555555;"><img src="https://sleepercdn.com/content/nfl/players/thumb/12545.jpg" alt="Tyler Shough" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #d4af37;margin-bottom:4px;display:block;"><span>Tyler Shough</span></div></div>
+        <h3>RAJ BENCHES TWO QUARTERBACKS, LOSES TO ONE</h3>
+        <p>apurvak10 (Apurva) 104.42, ScubaDoobaDUDE (Raj) 94.68. Raj left Drake Maye (23.8) AND Jordan Love (21.24) sitting on his bench while Matthew Stafford coughed up 16.88 as the starter. That&#x27;s 45 points of quarterback doing nothing but watching. In fairness to him, Apurva did the same dumb shit: Tyler Shough dropped 26.96 on her bench while Dak Prescott gave her 13.02, so she won a game neither of them deserved to win. Raj also churned his defense three times this week (Broncos to Colts to Jaguars) and the Jags paid him exactly 1 point. Commissioner who wants to rewrite defense scoring, meet the defense. Raj falls to 2-4, Apurva sits at 2-4 right beside him.</p>
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4dXAxcWNtczJzdzI4Mm9qdTgza2M3bzZ0bDM5Z3M0cHpxM3k3bWlqaCZlcD12MV9naWZzX2dpZklkJmN0PWc/AjYsTtVxEEBPO/giphy.gif" alt="Bad bench call" width="260" style="max-width:100%;border-radius:6px;border:2px solid #d4af37;display:block;margin:8px auto;">
+      </div>
+
+      <div class="callout">
+        <div style="display:flex;justify-content:center;margin-bottom:10px;"><div style="display:flex;flex-direction:column;align-items:center;font-size:11px;color:#555555;"><img src="https://sleepercdn.com/content/nfl/players/thumb/7523.jpg" alt="Trevor Lawrence" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #d4af37;margin-bottom:4px;display:block;"><span>Trevor Lawrence</span></div></div>
+        <h3>CJ WINS WITH 76 POINTS ON THE BENCH. ABHISHEK&#x27;S AI CAN&#x27;T TRANSFORM THIS</h3>
+        <p>Cehehe (CJ) 126.70, Humbled and Honored (Abhishek) 114.04. CJ&#x27;s team scored the most points in the league while Brock Purdy (17.36), DeVonta Smith (17.0) and Colston Loveland (15.5) rode the pine for 76.06 total. Christian McCaffrey&#x27;s 26.2 did the heavy lifting. Abhishek got a monster 28.34 from Trevor Lawrence and a 17-point kicker in Chris Boswell, and still lost. 114 points and a loss, which drops him to 1-5 and dead last in the league. Abhishek, buddy, you&#x27;ve got AI transformation on the brain at work, but nobody transformed this lineup into a win. CJ moves to 5-1.</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4OXRmcTFoN2xlMDV1cTFmN3NnaW14eDByazc0azRldXZxdWxiaHAzNCZlcD12MV9naWZzX2dpZklkJmN0PWc/15BuyagtKucHm/giphy.gif" alt="Mic drop" width="260" style="max-width:100%;border-radius:6px;border:2px solid #d4af37;display:block;margin:8px auto;">
+      </div>
+
+      <div class="callout">
+        <div style="display:flex;justify-content:center;margin-bottom:10px;"><div style="display:flex;flex-direction:column;align-items:center;font-size:11px;color:#555555;"><img src="https://sleepercdn.com/content/nfl/players/thumb/8131.jpg" alt="Isaiah Likely" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #d4af37;margin-bottom:4px;display:block;"><span>Isaiah Likely</span></div></div>
+        <h3>MALVI WINS UGLY, CODY&#x27;S MR. SWIFT APOLOGY IS REVOKED</h3>
+        <p>malvijani (Malvi) 89.40, Dolphins Made Me Cry (Cody) 76.64. Malvi took 0.0 from Cam Skattebo and 6.3 from Bijan Robinson and still got out alive, thanks to Isaiah Likely&#x27;s 20.9 and a 16-point Chiefs defense. She also left 43.18 on her bench (Mahomes, Diggs, Evans all sitting there). Cody&#x27;s Travis Kelce brought 7.3, so the formal apology we owe Mr. Swift is hereby on hold, pending a pulse. Brandon Aubrey kicked for 1.0 and Tyreek Hill got a big fat 0.0 sitting on the bench, which fits a guy whose team name is Dolphins Made Me Cry. Malvi is 5-1 and tied atop the league. Cody drops to 3-3, and I&#x27;m sure the sleep deprivation is not helping the lineup decisions.</p>
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4amNrNG9wNGRhdmYwMmJ4aDFzYzFqNjM4eWY2Y2YwZGVybHBybXV2aiZlcD12MV9naWZzX2dpZklkJmN0PWc/z9KV8nZ8djRht0r4WF/giphy.gif" alt="Heartbreak" width="260" style="max-width:100%;border-radius:6px;border:2px solid #d4af37;display:block;margin:8px auto;">
+      </div>
+
+      <div class="callout">
+        <div style="display:flex;justify-content:center;margin-bottom:10px;"><div style="display:flex;flex-direction:column;align-items:center;font-size:11px;color:#555555;"><img src="https://sleepercdn.com/content/nfl/players/thumb/8138.jpg" alt="James Cook" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #d4af37;margin-bottom:4px;display:block;"><span>James Cook</span></div></div>
+        <h3>MILENA BEATS KATRINA WHILE BENCHING A 20-POINT TIGHT END</h3>
+        <p>milboy (Milena) 111.00, sportsmaxxing treen (Katrina) 96.08. James Cook&#x27;s 22.8 and Bhayshul Tuten&#x27;s 22.7 handled the business, and Malik Nabers added 22.5. Milena started Brenton Strange for 6.9 while Kyle Pitts put up 20.5 on her bench, so she&#x27;s lucky she won. Katrina got 0.0 from Tyler Warren and 2.0 from Denzel Boston, so the possum act has officially stopped working: JSN gave her 19.4 and she gets to keep her Seahawks allegiance of convenience, but that&#x27;s all she&#x27;s keeping. Both teams are 3-3 now, in the giant pileup in the middle of the league.</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4c2Z6OXgwcHlwMzBoamVnYjY1amx4Yng1d2Zwbng1dGppM21wbDI4dSZlcD12MV9naWZzX2dpZklkJmN0PWc/3o6vY7UsuMPx3Yj9Xa/giphy.gif" alt="Easy win" width="260" style="max-width:100%;border-radius:6px;border:2px solid #d4af37;display:block;margin:8px auto;">
+      </div>
+
+      <div class="callout">
+        <div style="display:flex;justify-content:center;margin-bottom:10px;"><div style="display:flex;flex-direction:column;align-items:center;font-size:11px;color:#555555;"><img src="https://sleepercdn.com/content/nfl/players/thumb/10213.jpg" alt="Tre Tucker" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #d4af37;margin-bottom:4px;display:block;"><span>Tre Tucker</span></div></div>
+        <h3>PARV GETS 77.92 AND AN EMPTY BENCH</h3>
+        <p>LeliRy 104.32, RedditoLombardi (Parv) 77.92 - the week&#x27;s biggest margin at 26.4. Parv&#x27;s best player was Tre Tucker with 24.2. Brian Thomas gave her 0.0 and Ladd McConkey, a Chargers receiver for a Chargers fan, gave her 2.2. Her entire bench combined for 0.4 points, so nothing was left on the table because there was nothing on the table. Meanwhile Rylia got 19.4 from Matthew Golden, 17.02 from Aaron Rodgers and 15.4 from George Kittle, and quietly moved to 4-2 while pretending they weren&#x27;t paying attention. #freeherbo hasn&#x27;t helped one bit. Parv is 2-4.</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTA0ZDY4MzE4cTczZzFkdXU0czRiOTl4ZDN3YnQzdGtvbGIzMzk5cWFjNXJwaDFheCZlcD12MV9naWZzX2dpZklkJmN0PWc/6wM4Zhs4h4PGo/giphy.gif" alt="Shocked" width="260" style="max-width:100%;border-radius:6px;border:2px solid #d4af37;display:block;margin:8px auto;">
+      </div>
+
+      <div class="section-title">The Grades</div>
+      <table class="grades" cellpadding="0" cellspacing="0">
+        <tr><th>Grade</th><th>Manager</th><th>Team</th></tr>
+        <tr><td class="grade-badge">A+</td><td>CJ</td><td>Cehehe</td></tr>
+        <tr><td class="grade-badge">A</td><td>Lelia &amp; Ryan</td><td>LeliRy</td></tr>
+        <tr><td class="grade-badge">A-</td><td>Milena</td><td>milboy</td></tr>
+        <tr><td class="grade-badge">B+</td><td>Malvi</td><td>malvijani</td></tr>
+        <tr><td class="grade-badge">B</td><td>Apurva</td><td>apurvak10</td></tr>
+        <tr><td class="grade-badge">C+</td><td>Abhishek</td><td>Humbled and Honored</td></tr>
+        <tr><td class="grade-badge">C</td><td>Katrina</td><td>sportsmaxxing treen</td></tr>
+        <tr><td class="grade-badge">C-</td><td>Raj</td><td>ScubaDoobaDUDE</td></tr>
+        <tr><td class="grade-badge">D</td><td>Cody</td><td>Dolphins Made Me Cry</td></tr>
+        <tr><td class="grade-badge">F</td><td>Parv</td><td>RedditoLombardi</td></tr>
+      </table>
+
+      <div class="fundbox-wrap">
+<table role="presentation" width="480" cellpadding="0" cellspacing="0" bgcolor="#1a5c3a" style="background-color:#1a5c3a;background-image:linear-gradient(135deg,#1a5c3a,#0d3b24);border:6px double #d4af37;border-radius:6px;margin:0 auto;">
+<tr><td style="padding:8px 10px 0 14px;font-family:Georgia,serif;font-size:16px;color:#d4af37;" width="30">$</td><td align="center" style="padding:8px 10px 0 10px;font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;color:#d4af37;text-transform:uppercase;">League Winnings Fund</td><td align="right" style="padding:8px 14px 0 10px;font-family:Georgia,serif;font-size:16px;color:#d4af37;" width="30">$</td></tr>
+<tr><td colspan="3" align="center" style="padding:8px 10px 2px 10px;font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:bold;color:#ffffff;">$300.47</td></tr>
+<tr><td colspan="3" align="center" style="padding:0 10px 6px 10px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#dc2626" style="background-color:#dc2626;padding:3px 12px;border-radius:10px;"><span style="color:#ffffff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;">&#9660; -$34.45 (-10.3%) this week</span></td></tr></table></td></tr>
+<tr><td colspan="3" align="center" style="padding:0 10px 10px 10px;font-family:Arial,sans-serif;font-size:11px;color:#a8c5a8;">+$0.47 (+0.2%) total since $300 buy-in</td></tr>
+<tr><td style="padding:2px 10px 12px 14px;font-family:Georgia,serif;font-size:14px;color:#d4af37;">$</td><td align="center" style="padding:2px 10px 12px 10px;font-family:Arial,sans-serif;font-size:10px;color:#a8c5a8;">Funded $300.00 on 8/19/26</td><td align="right" style="padding:2px 14px 12px 10px;font-family:Georgia,serif;font-size:14px;color:#d4af37;">$</td></tr>
+</table>
+      </div>
+
+      <div class="realtalk">
+        <div class="label">Real Talk</div>
+        <p>Malvi and CJ are 5-1 and clear of the field, with LeliRy lurking at 4-2. The middle is a six-way mess of 3-3s and 2-4s, and Abhishek is dead last at 1-5. Commissioner Court remains deadlocked on CJ&#x27;s IR petition and Raj&#x27;s defense-scoring crusade, but after the Jaguars gave Raj a single point this week, he might get his unanimous vote after all.</p>
+        <p>Two QBs benched, a 76-point bench that still won, and a bench with 0.4 points. Set your lineups, people. Week 7 is wide open.</p>
+      </div>
+
+      <div class="signoff">Keep it real, keep it chaotic. 🏈</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
